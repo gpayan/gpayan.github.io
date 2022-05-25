@@ -1,0 +1,117 @@
+.image-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+@media(min-width: 901px){
+    .polaroid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "image-pola"
+            "image-pola"
+            "image-pola"
+            "caption-pola";
+ /*       width:20vw;
+        height:40vh;    */
+        width: 223px;
+        height: 272px;
+        background-color: #edebe6;
+        border: 1px solid black;
+        transform: rotate(-3deg);
+    }
+
+    .caption-pola {
+        grid-area: caption-pola;
+        color: black;
+        font-family: 'Caveat', cursive;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media(min-width: 601px) and (max-width: 900px){
+    .polaroid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "image-pola"
+            "image-pola"
+            "image-pola"
+            "caption-pola";
+        width:155px;
+        height:188px;
+        background-color: #edebe6;
+        border: 1px solid black;
+        transform: rotate(-3deg);
+    }
+
+    .caption-pola {
+        grid-area: caption-pola;
+        color: black;
+        font-family: 'Caveat', cursive;
+        text-align: center;
+        margin: auto;
+        font-size: 0.7em;
+    }
+}
+
+@media(max-width: 600px){
+    .polaroid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "image-pola"
+            "image-pola"
+            "image-pola"
+            "caption-pola";
+        width:86px;
+        height:105px;
+        background-color: #edebe6;
+        transform: rotate(-3deg);
+        border: 1px solid black;
+    }
+
+    .caption-pola {
+        grid-area: caption-pola;
+        color: black;
+        font-family: 'Caveat', cursive;
+        text-align: center;
+        margin: auto;
+        font-size: 0.4em;
+    }
+
+}
+
+.img-pola {
+    grid-area: image-pola;
+    background-color: black;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+div.img-pola > img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg);
+    transform: translate(0,-25px);
+    box-shadow: 10px 5px 15px black;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.caption-pola:hover{
+    color: orange;
+}
+

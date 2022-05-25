@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
-header {
-    color: black;
-    background-color: #edebe6;
-    grid-area: header;
-    font-family: Helvetica, sans-serif;
-    font-size: 2em;
-    height: 100%;
-}
+@import url('./author_card.css');
+@import url('./image_handler.css');
+@import url('./articles.css');
 
 header:hover {
     color: pink;
@@ -15,114 +9,204 @@ header:hover {
 
 footer {
     grid-area: footer;
-    background-color: white;
-    margin: auto;
-    font-family: Helvetica, sans-serif;
-}
-
-nav {
-    grid-area: nav;
-    background-color: #edebe6;
-    border-right: 1px solid pink;
-    margin: 2px;
-    padding: 2px;
-}
-
-/*
-main {
-    grid-area: main;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-*/
-
-main {
-    grid-area: main;
-    display: grid;
-    grid-auto-rows: minmax(300px, auto);
-    grid-template-columns: 1fr;
-    grid-gap: 5px;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-
-.article-top {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: white;
-    justify-content: space-evenly;
-}
-
-.article-middle {
-    grid-area: article-middle;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: dimgrey;
-}
-
-.article-bottom {
-    grid-area: article-bottom;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: tan;
-}
-
-aside {
-    grid-area: aside;
-    background-color: #edebe6;
-    margin: 2px;
-    padding: 2px;
-    border-left: 1px solid pink;
-}
-
-.box {
-    width: 50px;
-    height: 50px;
     background-color: pink;
-    border: 1px solid green;
+    font-family: Helvetica, sans-serif;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
-    margin: 0;
-    padding: 0;
-    /* height: 100vh; */
-    /* width: 100vw; */
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 50px repeat(6, 1fr) 50px;
-    /* grid-auto-rows: 50px minmax(100px, auto) 50px; */
-    grid-template-areas:
-        "header header header header header header"
-        "nav main main main main aside"
-        "nav main main main main aside"
-        "nav main main main main aside"
-        "nav main main main main aside"
-        "nav main main main main aside"
-        "nav main main main main aside"
-        "footer footer footer footer footer footer";
-}
-
-.yellow-rectangle{
-    grid-area: 4/4/6/6;
-    background-color: yellow;
+.love-class {
     color: red;
-    border-radius: 25px;
+    white-space: pre;
 }
 
-.purple-rectangle {
-    grid-area: 3/3/4/4;
-    background-color: purple;
-    border-radius: 45%;
-    z-index: -1;
+@media(min-width: 901px){
+    header {
+        color: black;
+        background-color: #edebe6;
+        grid-area: header;
+        font-family: Helvetica, sans-serif;
+        font-size: 2em;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .main-container {
+        margin: 0;
+        padding: 0;
+        /* height: 100vh; */
+        /* width: 100vw; */
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 50px repeat(6, 1fr) 50px;
+        /* grid-auto-rows: 50px minmax(100px, auto) 50px; */
+        grid-template-areas:
+            "header header header header header header"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "footer footer footer footer footer footer";
+    }
+    
+    nav {
+        grid-area: nav;
+        background-color: #edebe6;
+        border-right: 1px solid pink;
+        margin: 2px;
+        padding: 2px;
+        font-size: 1em;
+    }
+
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        grid-auto-rows: minmax(300px, auto);
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: #edebe6;
+        margin: 2px;
+        padding: 2px;
+        border-left: 1px solid pink;
+    }
 }
 
-.white-rectangle {
-    background-color: white;
+@media(min-width: 601px) and (max-width: 900px){
+    header {
+        color: black;
+        background-color: #edebe6;
+        grid-area: header;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.5em;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main-container {
+        margin: 0;
+        padding: 0;
+        /* height: 100vh; */
+        /* width: 100vw; */
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 50px repeat(6, 1fr) 50px;
+        /* grid-auto-rows: 50px minmax(100px, auto) 50px; */
+        grid-template-areas:
+            "header header header header header header"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "nav main main main main aside"
+            "footer footer footer footer footer footer";
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: #edebe6;
+        border-right: 1px solid pink;
+        margin: 2px;
+        padding: 2px;
+        font-size: 0.8em;
+    }
+    
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        grid-auto-rows: minmax(auto, 220px);
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: #edebe6;
+        margin: 2px;
+        padding: 2px;
+        border-left: 1px solid pink;
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width: 600px){
+    header {
+        color: black;
+        background-color: #edebe6;
+        grid-area: header;
+        font-family: Helvetica, sans-serif;
+        height: 100%;
+        font-size: 1em;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main-container {
+        margin: 0;
+        padding: 0;
+        /* height: 100vh; */
+        /* width: 100vw; */
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 25px 50px repeat(4, 1fr) minman(25px, auto) 25px;
+        /* grid-auto-rows: 50px minmax(100px, auto) 50px; */
+        grid-template-areas:
+            "header header header header header header"
+            "nav nav nav nav nav nav"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "aside aside aside aside aside aside"
+            "footer footer footer footer footer footer";
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: #edebe6;
+        border-right: 1px solid pink;
+        margin: 2px;
+        padding: 2px;
+        font-size: 0.5em;
+    }
+    
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        grid-auto-rows: minmax(auto, 120px);
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: #edebe6;
+        margin: 2px;
+        padding: 2px;
+        border-left: 1px solid pink;
+        font-size: 0.6em;
+    }
 }
 
 .aside-section {
@@ -134,12 +218,6 @@ aside {
     padding: 2px;
 }
 
-/*
-.aside-section > h4 {
-    color: pink;
-}
-*/
-
 .aside-section > ul {
     font-size: 0.5em;
 }
@@ -149,108 +227,13 @@ aside {
     color: white;
 }
 
-.article-class {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas:
-    /* "title title" */
-    "image image"
-    "image image"
-    "image image"
-    "image image"
-    "image image"
-    "date author";
-    width: 25vw;
-    height: 40vh;
-    background-color: blue;
-    border: 1px solid red;
-}
-
-.title-article {
-    grid-area: title;
-    background-color: lightblue;
-}
-
-.image-article {
-    grid-area: image;
-    border: 3px solid orange;
-    text-align: center;
-}
-
-.image-article:hover{
-    transform: translate(0,-10px);
-    /* transform: rotate(10deg); */
-    transition: transform 1s;
-}
-
-img {
-    height: 100%; 
-    width: auto;
-}
-
-figcaption {
-    font-family: Helvetica, sans-serif;
-    color: black;
-    width: auto;
-    font-size: 0.8em;
-}
-
-figure {
-    text-align: center;
-    margin: 0;
-}
-
-.polaroid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    "image-pola"
-    "image-pola"
-    "image-pola"
-    "caption-pola";
-    width:20vw;
-    height:40vh;
-    background-color: #edebe6;
-    border: 1px solid black;
-    transform: rotate(-3deg);
-}
-
-.img-pola {
-    grid-area: image-pola;
-    background-color: black;
-    text-align: center;
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-.caption-pola {
-    grid-area: caption-pola;
-    color: black;
-    font-family: 'Caveat', cursive;
-    text-align: center;
-    margin: auto;
-}
-
-.polaroid:hover {
-    transform: rotate(0deg);
-    transform: translate(0,-25px);
-    box-shadow: 10px 5px 15px black;
-    transition: transform 0.5s, box-shadow 0.3s;
-}
-
-.caption-pola:hover{
-    color: orange;
-}
-
-.love-class {
-    color: red;
-}
-
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: orange;
 }
 
 .latest-comment {
@@ -260,61 +243,4 @@ a {
 
 .aside-section > p:hover{
     color: black;
-}
-
-.article-image {
-    width: 80%;
-    height: auto;
-}
-
-article {
-    border-bottom: 1px solid black;
-}
-
-.author {
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10fr 1fr 1fr 1fr 2fr;
-    grid-template-areas: 
-    "image-author"
-    "name-author"
-    "title-author"
-    "company-author"
-    "bio-author";
-    margin-top: 20px;
-    background-color: pink;
-    color: white;
-    margin-left: 1px;
-    margin-right: 1px;
-}
-
-.avatar-author {
-    grid-area: image-author;
-    background-color: green;
-}
-
-.name-author {
-    grid-area: name-author;
-    margin: auto;
-}
-
-.title-author {
-    grid-area: title-author;
-    margin: auto;
-}
-
-.company-author {
-    grid-area: company-author;
-    margin: auto;
-}
-
-.bio-author {
-    grid-area: bio-author;
-    margin: auto;
-    padding: 2px;
-}
-
-.pic-author {
-    height: 100%;
-    width: 100%;
 }
