@@ -21,6 +21,31 @@
     .social-media {
         font-size: 0.6em;
     }
+
+    .quote {
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+    
+    figure > blockquote {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        background-color: #F2F2F2;
+        font-size: 1.4em;
+    
+    }
+
+    button {
+        border-radius: 5%;
+        font-family: Helvetica, sans-serif;
+        font-size: 1em;
+        text-align: center;
+        margin-left: 10px;
+        display: block;
+        height: 25px;
+        width: 100px;
+    }
 }
 
 @media(min-width: 601px) and (max-width: 900px){
@@ -36,6 +61,31 @@
     .social-media {
         font-size: 0.5em;
     }
+
+    .quote {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    figure > blockquote {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        background-color: #F2F2F2;
+        font-size: 1em;
+    
+    }
+
+    button {
+        border-radius: 5%;
+        font-family: Helvetica, sans-serif;
+        font-size: 0.7em;
+        text-align: center;
+        display: block;
+        margin-left: 10px;
+        width: 70px; 
+        height: 20px;
+    }
 }
 
 @media(max-width: 600px){
@@ -50,6 +100,30 @@
 
     .social-media {
         font-size: 0.4em;
+    }
+
+    .quote {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    
+    figure > blockquote {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        background-color: #F2F2F2;
+        font-size: 0.7em;
+    
+    }
+
+    button {
+        border-radius: 5%;
+        font-family: Helvetica, sans-serif;
+        font-size: 0.7em;
+        text-align: center;
+        margin-left: 5px;
+        width: 65px; 
+        height: 15px;
     }
 }
 
@@ -85,4 +159,8 @@ figure {
 p > a {
     color: blue;
     font-weight: bold;
+}
+
+button:hover{
+    background-color: #a9a9a9;
 }
